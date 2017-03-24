@@ -63,6 +63,8 @@ public class StaticTest {
                 count++;
             }
         });
+
+
         timer.start(1000);
     }
 
