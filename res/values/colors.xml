@@ -46,4 +46,6 @@
     <color name="possible_result_points">#c0ffff00</color>
     <color name="result_view">#b0000000</color>
     <color name="phone_bg">#e6a034</color>
+    <color name="uncompleted_color">#41e6a8</color>
+    <color name="completed_color">#c22c29</color>
 </resources>

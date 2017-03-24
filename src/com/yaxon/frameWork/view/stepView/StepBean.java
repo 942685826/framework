@@ -15,6 +15,11 @@ public class StepBean {
     private String name;
     private int state;
 
+    public StepBean(String name, int state) {
+        this.name = name;
+        this.state = state;
+    }
+
     public String getName() {
         return name;
     }
