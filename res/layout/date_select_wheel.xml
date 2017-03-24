@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_background"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="0.3"
+            android:background="@null"
+            android:text="@string/cancel"
+            android:textColor="@color/purple"
+            android:textSize="16sp" />
+        
+        <TextView
+            android:id="@+id/diaolog_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/time_select"
+            android:textColor="#ff737373"
+            android:textSize="18sp" />
+
+         <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_weight="0.3"
+            android:background="@null"
+            android:text="@string/confirm"
+            android:textColor="@color/purple"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="@color/black"
+        android:padding="1dp"
+        android:contentDescription="@string/app_name"/>
+
+   <LinearLayout
+        android:id="@+id/date_selelct_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <com.yaxon.frameWork.view.date.wheelwidge.WheelView
+            android:id="@+id/day"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="5dp" />
+
+        <com.yaxon.frameWork.view.date.wheelwidge.WheelView
+            android:id="@+id/hours"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_weight="1"
+            android:padding="5dp" />
+
+        <com.yaxon.frameWork.view.date.wheelwidge.WheelView
+            android:id="@+id/mins"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

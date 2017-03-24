@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="blue">#db267cd7</color>
+    <color name="text_pre">#ffffab09</color>
+
+    <!-- 白色 -->
+    <color name="white">#FFFFFF</color>
+    <!--<color name="white1">#ffffff</color>-->
+    <!-- 黑色 -->
+    <color name="black">#000000</color>
+    <!-- 基底颜色 -->
+    <color name="appbg">#19141400</color>
+
+    <!-- 登录按钮色 -->
+    <!--<color name="green">#4fbfb0</color>-->
+
+    <color name="navpage">#FFE1E8EB</color>
+
+    <color name="purple">#673ab7</color>
+    <!--<color name="holo_blue">#FF33E5B5</color>-->
+    <color name="status_purple">#512da8</color>
+
+    <!--<color name="one">#ff818afe</color>-->
+    <color name="two">#bfbfbf</color>
+    <color name="three">#19141400</color>
+    <!--<color name="four">#00bcd4</color>-->
+    <!--<color name="five">#43c052</color>-->
+    <color name="six">#8673f8</color>
+    <!--<color name="seven">#6ab5f5</color>-->
+    <!--<color name="eight">#ffff954f</color>-->
+
+    <!--<color name="price_bg">#e08673f8</color>-->
+    <color name="red">#fffe3e3e</color>
+
+    <color name="app_background">#ffe0e0e0</color>
+
+    <color name="yje_grey">#f1f1f1</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="result_view">#b0000000</color>
+    <color name="phone_bg">#e6a034</color>
+</resources>

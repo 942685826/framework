@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+
+    <!-- 数据库名 -->
+
+    <dbname value="frameWork" >
+    </dbname>
+
+    <!-- 版本号 -->
+
+    <version value="1" >
+    </version>
+
+    <list>
+
+        <!-- 用于设定所有的映射模型-->
+        <mapping class="com.yaxon.frameWork.db.litepal.UserTable"></mapping>
+    </list>
+
+</litepal>

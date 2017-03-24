@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">framework</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="time_select">选择预约时间</string>
+</resources>

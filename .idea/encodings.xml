@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/assets/litepal.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/assets/webview.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/batch" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/libs/gson-2.5.jar" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/res/layout/main.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/res/layout/webview.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/res/raw" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/res/xml/canid.xml" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/db/DBDataChangedListener.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/db/DBTable.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/db/DBUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/db/Database.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/debug/CrashExceptionHandler.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/debug/LogUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/debug/LogcatFileManager.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/debug/ToastUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/file/Zip.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/utils/AppUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/utils/CameraUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/utils/DensityUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/utils/GsensorUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/utils/GsonUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/utils/KeyBoardUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/utils/SDCardUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/utils/SPUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/utils/ScreenUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/utils/SoundAdjustUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/view/popupView/Android_UI_16Activity.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/view/progress/CustomProgressBar.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/view/volume/CustomVolumeControlBar.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/yaxon/frameWork/view/webview/WebViewActivity.java" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

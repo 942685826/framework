@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--微信tab栏 开始-->
+    <attr name="tabicon" format="reference"/>
+    <attr name="tabcolor" format="color"/>
+    <attr name="text" format="string"/>
+    <attr name="text_size" format="dimension"/>
+
+    <declare-styleable name="ChangeColorIconWithText">
+        <attr name="tabicon" />
+        <attr name="tabcolor"/>
+        <attr name="text"/>
+        <attr name="text_size"/>
+    </declare-styleable>
+    <!--微信tab栏 结束-->
+
+    <!--QQ侧滑 开始-->
+    <attr name="rightPadding" format="dimension" />
+
+    <declare-styleable name="SlidingMenu">
+        <attr name="rightPadding" />
+    </declare-styleable>
+    <!--QQ侧滑 结束-->
+
+    <!--圆形图片 开始-->
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <!--圆形图片 结束-->
+
+    <!--椭圆形图片 开始-->
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+    <!--椭圆形图片 结束-->
+
+    <attr name="firstColor" format="color" />
+    <attr name="secondColor" format="color" />
+    <attr name="circleWidth" format="dimension" />
+    <attr name="speed" format="integer" />
+
+    <declare-styleable name="CustomProgressBar">
+        <attr name="firstColor" />
+        <attr name="secondColor" />
+        <attr name="circleWidth" />
+        <attr name="speed" />
+    </declare-styleable>
+
+    <!--<attr name="firstColor" format="color" />-->
+    <!--<attr name="secondColor" format="color" />-->
+    <!--<attr name="circleWidth" format="dimension" />-->
+    <attr name="dotCount" format="integer" />
+    <attr name="splitSize" format="integer" />
+    <attr name="bg" format="reference"></attr>
+
+    <declare-styleable name="CustomVolumeControlBar">
+        <attr name="firstColor" />
+        <attr name="secondColor" />
+        <attr name="circleWidth" />
+        <attr name="dotCount" />
+        <attr name="splitSize" />
+        <attr name="bg" />
+    </declare-styleable>
+</resources>

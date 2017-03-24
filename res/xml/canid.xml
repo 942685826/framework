@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <channel no="1" braudRate="6" frameType="2" workMode="1">
+         <filterid id="1801D1F3" mask="FFFFFFFF" rptPeriod="200"/> <!-- -->
+         <filterid id="183DD1F3" mask="FFFFFFFF" rptPeriod="200"/> <!-- -->
+         <filterid id="18F8209E" mask="FFFFF0FF" rptPeriod="200"/> <!-- -->
+         <!--<filterid id="18F8289E" mask="FFFFF0FF" rptPeriod="200"/> &lt;!&ndash; &ndash;&gt;-->
+         <!--<filterid id="18F8299E" mask="FFFFF0FF" rptPeriod="100"/> &lt;!&ndash; &ndash;&gt;-->
+         <!--<filterid id="18F82A9E" mask="FFFFF0FF" rptPeriod="300"/> &lt;!&ndash; &ndash;&gt;-->
+         <!--<filterid id="18F82B9E" mask="FFFFF0FF" rptPeriod="1000"/>-->
+         <!--<filterid id="18F82C9E" mask="FFFFF0FF" rptPeriod="1000"/>-->
+         <!--<filterid id="18F82D9E" mask="FFFFF0FF" rptPeriod="100"/>-->
+         <!--<filterid id="18F82E9E" mask="FFFFF0FF" rptPeriod="100"/>-->
+         <filterid id="18F100D0" mask="FFFFF0FF" rptPeriod="100"/>
+         <!--<filterid id="18F104D0" mask="FFFFF0FF" rptPeriod="100"/>-->
+         <!--<filterid id="18F105D0" mask="FFFFF0FF" rptPeriod="100"/>-->
+         <!--<filterid id="18F106D0" mask="FFFFF0FF" rptPeriod="100"/>-->
+         <!--<filterid id="18F107D0" mask="FFFFF0FF" rptPeriod="100"/>-->
+         <!--<filterid id="18F108D0" mask="FFFFF0FF" rptPeriod="100"/>-->
+     </channel>
+ </resources>

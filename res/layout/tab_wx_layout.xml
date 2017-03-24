@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                xmlns:mayi="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".MainActivity">
+
+
+    <LinearLayout
+            android:id="@+id/win_lin"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible"
+            android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <LinearLayout
+                    android:id="@+id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@drawable/tab_bg"
+                    android:orientation="horizontal"
+                    android:layout_alignParentBottom="true">
+
+                <com.yaxon.frameWork.view.tabview.ChangeColorIconWithText
+                        android:id="@+id/id_indicator_one"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        mayi:tabicon="@drawable/home"
+                        mayi:text="家庭"
+                        mayi:text_size="12sp"
+                        mayi:tabcolor="#ff965dff" />
+
+                <com.yaxon.frameWork.view.tabview.ChangeColorIconWithText
+                        android:id="@+id/id_indicator_two"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        mayi:tabicon="@drawable/life"
+                        mayi:text="生活"
+                        mayi:text_size="12sp"
+                        mayi:tabcolor="#ff965dff" />
+
+                <com.yaxon.frameWork.view.tabview.ChangeColorIconWithText
+                        android:id="@+id/id_indicator_three"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+                        mayi:tabicon="@drawable/place"
+                        mayi:text="订单"
+                        mayi:text_size="12sp"
+                        mayi:tabcolor="#ff965dff" />
+
+                <com.yaxon.frameWork.view.tabview.ChangeColorIconWithText
+                        android:id="@+id/id_indicator_four"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:padding="5dp"
+
+                        mayi:tabicon="@drawable/me"
+                        mayi:text="我的"
+
+                        mayi:text_size="12sp"
+                        mayi:tabcolor="#ff965dff" />
+
+            </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

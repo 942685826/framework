@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res/com.yaxon.frameWork"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   
+
+    <com.yaxon.frameWork.view.progress.CustomProgressBar
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        zhy:circleWidth="15dp"
+        zhy:firstColor="#D4F668"
+        zhy:secondColor="#2F9DD2"
+        zhy:speed="20" />
+
+    <com.yaxon.frameWork.view.progress.CustomProgressBar
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        zhy:circleWidth="24dp"
+        android:layout_marginBottom="40dp"
+        zhy:firstColor="#16A3FA"
+        zhy:secondColor="#D20F02"
+        zhy:speed="10" />
+
+</RelativeLayout>

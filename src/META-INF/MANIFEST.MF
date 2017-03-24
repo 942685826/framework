@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Class-Path: baidumapapi_base_v4_1_1.jar badgeview.jar litepal-1.3.1.ja
+ r baidumapapi_map_v4_1_1.jar nineoldandroids-2.4.0.jar android-suppor
+ t-v4.jar gson-2.5.jar locSDK_6.13.jar
+Main-Class: com.yaxon.frameWork.StaticTest
+
