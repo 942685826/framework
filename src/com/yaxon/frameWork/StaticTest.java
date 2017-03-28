@@ -53,12 +53,6 @@ public class StaticTest {
             public void onPeriod(Object obj) {
                 if (count % 3 == 0) {
                     System.out.println(new Date() + ":" + count);
-//                    try {
-//                        // 这块是你要要定时器停止的时间，这里使用2秒
-//                        Thread.sleep(2000);
-//                    } catch (InterruptedException e) {
-//                        e.printStackTrace();
-//                    }
                 }
                 count++;
             }
