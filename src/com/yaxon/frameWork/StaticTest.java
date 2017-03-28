@@ -37,16 +37,10 @@ public class StaticTest {
     }
 
     public static void main(String[] args) {
-//        new Thread() {
-//            @Override
-//            public void run() {
-//                new StaticTest("init").test();
-//            }
-//        }.start();
-
         StaticTest t = new StaticTest("init");
         t.test();
     }
+
     public void test() {
         Timer timer = new Timer(new TimerListener() {
             @Override
@@ -57,8 +51,6 @@ public class StaticTest {
                 count++;
             }
         });
-
-
         timer.start(1000);
     }
 
