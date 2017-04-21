@@ -102,7 +102,7 @@ public class Zip {
         String strEntry;
         try {
             // »º³åÊä³öÁ÷
-            BufferedOutputStream dest = null;
+            BufferedOutputStream dest;
             FileInputStream fis = new FileInputStream(zipFile);
             ZipInputStream zis = new ZipInputStream(
                     new BufferedInputStream(fis));

@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.TimerTask;
 
 /**
- * Created by Administrator on 2017/2/18.
+ * Created by gjp on 2017/2/18.
  */
 public class StaticTest {
     private int count = 0;

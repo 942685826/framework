@@ -10,6 +10,7 @@ import android.widget.Toast;
  * @version 2016-11-9 创建<br>
  */
 public class ToastUtils {
+    private static boolean toast = true;
     private ToastUtils() {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
@@ -21,7 +22,9 @@ public class ToastUtils {
      * @param message
      */
     public static void showShort(Context context, CharSequence message) {
-        Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+        if (toast) {
+            Toast.makeText(context, message, Toast.LENGTH_SHORT).show();
+        }
     }
 
     /**
@@ -31,6 +34,8 @@ public class ToastUtils {
      * @param message
      */
     public static void showLong(Context context, CharSequence message) {
-        Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+        if (toast) {
+            Toast.makeText(context, message, Toast.LENGTH_LONG).show();
+        }
     }
 }
