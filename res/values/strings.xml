@@ -4,4 +4,9 @@
     <string name="cancel">取消</string>
     <string name="confirm">确定</string>
     <string name="time_select">选择预约时间</string>
+
+    <string name="check_wifi_state">检查WIFi状态</string>
+    <string name="open_wifi">打开WiFi</string>
+    <string name="close_wifi">关闭WiFi</string>
+    <string name="scan_wifi">扫描附近WiFi</string>
 </resources>
