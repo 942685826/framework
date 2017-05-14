@@ -238,10 +238,10 @@ public class WifiUtil {
      *
      * @param wifiConfiguration
      */
-    public void addNetwork(WifiConfiguration wifiConfiguration) {
+    public void addNetwork(WifiConfiguration wifiConfiguration, Context context) {
+        WifiHotspotUtils.getInstance(context);
         int wcgId = wifiManager.addNetwork(wifiConfiguration);
         boolean enable = wifiManager.enableNetwork(wcgId, true);
-        LogUtils.d(TAG, "wcgId:" + wcgId + " is" + enable);
     }
 
     /**
@@ -303,7 +303,7 @@ public class WifiUtil {
         }
 
         if (type == 3) {
-            configuration.wepKeys[0] = "\"" + password + "\"";
+            configuration.preSharedKey = "\"" + password + "\"";
             configuration.hiddenSSID = true;
             configuration.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
             configuration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
@@ -313,6 +313,7 @@ public class WifiUtil {
             configuration.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
             configuration.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
             configuration.status = WifiConfiguration.Status.ENABLED;
+
         }
         return configuration;
     }

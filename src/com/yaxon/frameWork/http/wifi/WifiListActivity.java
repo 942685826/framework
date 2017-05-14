@@ -77,7 +77,7 @@ public class WifiListActivity extends Activity implements OnClickListener {
                         Editor editor = preferences.edit();
                         editor.putString(ssid, pw);
                         editor.commit();
-                        mWifiAdmin.addNetwork(mWifiAdmin.createWifiInfo(ssid, et_password.getText().toString(), 3));
+                        mWifiAdmin.addNetwork(mWifiAdmin.createWifiInfo(ssid, et_password.getText().toString(), 3), WifiListActivity.this);
                     }
                 });
                 alert.setNegativeButton("取消", new DialogInterface.OnClickListener() {
