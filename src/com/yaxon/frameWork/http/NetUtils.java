@@ -40,6 +40,7 @@ public class NetUtils {
     private static String mProxy = "";
     private static String mPort = "";
     private static String mCurUser = "";
+
     private NetUtils() {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
@@ -260,7 +261,6 @@ public class NetUtils {
         }
         return mApnName;
     }
-
 
 
     /**

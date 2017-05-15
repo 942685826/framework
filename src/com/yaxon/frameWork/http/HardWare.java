@@ -27,7 +27,8 @@ import java.lang.Process;
 /**
  * 硬件设备类
  *
- * @author zzh 2012.11.15 创建<br>
+ * @author guojiaping
+ * @version 2012.11.15 创建<br>
  */
 public class HardWare {
     public static final String PHONE_MODEL_T21 = "W9778";

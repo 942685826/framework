@@ -1,4 +1,4 @@
-package com.yaxon.frameWork.utils;
+package com.yaxon.frameWork.view.image;
 
 
 import android.graphics.Bitmap;
