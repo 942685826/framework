@@ -5,17 +5,8 @@ package com.yaxon.frameWork.sensor;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.Handler;
 import android.os.Message;
-import com.yaxon.frameWork.debug.LogUtils;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
-import java.util.Timer;
-import java.util.TimerTask;
 
 
 /**

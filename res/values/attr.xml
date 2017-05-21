@@ -63,4 +63,10 @@
         <attr name="splitSize" />
         <attr name="bg" />
     </declare-styleable>
+
+    <declare-styleable name="ScrollableLayout">
+        <attr name="scrollable_maxScroll" format="dimension"/>
+        <attr name="scrollable_scrollerFlywheel" format="boolean"/>
+    </declare-styleable>
+
 </resources>

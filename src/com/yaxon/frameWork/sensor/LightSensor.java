@@ -5,11 +5,8 @@ package com.yaxon.frameWork.sensor;
 
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.os.Handler;
 import android.os.Message;
-import com.yaxon.frameWork.debug.LogUtils;
 
 
 /**

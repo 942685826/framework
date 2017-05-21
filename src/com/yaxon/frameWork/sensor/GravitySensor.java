@@ -8,7 +8,6 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorManager;
 import android.os.Message;
 
-
 /**
  * 重力传感器
  *
@@ -58,6 +57,4 @@ public class GravitySensor extends SensorBase {
 
         }
     }
-
-
 }
