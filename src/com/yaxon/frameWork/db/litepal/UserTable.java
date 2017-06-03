@@ -10,6 +10,7 @@ public class UserTable extends DataSupport {
     private int id;
     private String name;
     private int age;
+    private int sex;
 
     public UserTable() {
     }
@@ -36,5 +37,13 @@ public class UserTable extends DataSupport {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public int getSex() {
+        return sex;
+    }
+
+    public void setSex(int sex) {
+        this.sex = sex;
     }
 }

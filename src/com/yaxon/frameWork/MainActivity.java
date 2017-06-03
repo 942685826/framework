@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import com.yaxon.frameWork.db.litepal.LitepalUtils;
 import com.yaxon.frameWork.debug.LogUtils;
 import com.yaxon.frameWork.http.HttpHandler;
 import com.yaxon.frameWork.view.date.DateUtils;
@@ -29,8 +30,8 @@ public class MainActivity extends Activity{
             @Override
             public void run() {
                 super.run();
-                CANSetting chanel = XmlParse.xmlResourceParse(MainActivity.this, R.xml.canid);
-                LogUtils.d("", "");
+                LitepalUtils.insert();
+                LitepalUtils.getUser();
             }
         }.start();
     }

@@ -1,6 +1,7 @@
 package com.yaxon.frameWork.db.litepal;
 
 import android.content.ContentValues;
+import com.yaxon.frameWork.debug.LogUtils;
 import org.litepal.crud.DataSupport;
 
 import java.util.List;
@@ -18,7 +19,8 @@ public class LitepalUtils {
     public static void insert() {
         UserTable user = new UserTable();
         user.setAge(47);
-        user.setName("guohailong");
+        user.setName("guo");
+        user.setSex(1);
         user.save();
     }
 
@@ -32,7 +34,7 @@ public class LitepalUtils {
         List<UserTable> info = DataSupport.where("1").limit(10).find(UserTable.class);
         if (info != null && info.size() > 0) {
             for (UserTable use : info) {
-
+                LogUtils.d("litapal", use.getName() + "," + use.getId() + "," + use.getAge() + "," + use.getSex());
             }
         }
     }
