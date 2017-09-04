@@ -11,9 +11,6 @@ import android.media.AudioManager;
  */
 public class SoundAdjustUtils {
 
-    private static final String TAG = "SoundAdjustUtils";
-
-
     /**
      * 系统音量设置
      *

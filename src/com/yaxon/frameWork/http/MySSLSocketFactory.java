@@ -16,7 +16,7 @@ import java.security.cert.X509Certificate;
  * @author guojiaping 2016-8-20 创建<br>
  */
 public class MySSLSocketFactory extends SSLSocketFactory {
-    SSLContext sslContext = SSLContext.getInstance("TLS");
+    SSLContext sslContext = SSLContext.getInstance("BKS");
 
     public MySSLSocketFactory(KeyStore truststore) throws NoSuchAlgorithmException,
             KeyManagementException, KeyStoreException, UnrecoverableKeyException {

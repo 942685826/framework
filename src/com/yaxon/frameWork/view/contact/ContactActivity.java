@@ -95,7 +95,7 @@ public class ContactActivity extends Activity implements AdapterView.OnItemClick
             } else {
                 list.get(i).setTitle("#");
             }
-            if (list.get(i).getName().equals("菁菁")) {
+            if (list.get(i).getName().equals("")) {
                 pinyin = characterParser.getSelling(list.get(i).getName());
                 pinyin = "";
             }

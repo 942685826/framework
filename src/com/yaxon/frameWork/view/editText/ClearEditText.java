@@ -13,7 +13,6 @@ import android.view.animation.CycleInterpolator;
 import android.view.animation.TranslateAnimation;
 import android.widget.EditText;
 import com.yaxon.frameWork.R;
-import com.yaxon.frameWork.debug.LogUtils;
 
 /**
  * @author guojiaping

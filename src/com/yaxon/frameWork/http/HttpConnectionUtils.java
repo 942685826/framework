@@ -102,14 +102,14 @@ public class HttpConnectionUtils implements Runnable {
             String basuuid = "";
             switch (method) {
                 case GET:
-                    HttpGet get = new HttpGet(url);
+                    HttpGet httpGet = new HttpGet(url);
                     if (token != null) {
-                        get.addHeader("X-XSRF-TOKEN", token);
+                        httpGet.addHeader("X-XSRF-TOKEN", token);
                     }
-                    get.addHeader("X-DEVICE-UNIONID", basuuid);
-                    get.addHeader("Accept", "application/json");
-                    get.addHeader("Content-Type", "application/json; charset=utf-8");
-                    response = httpClient.execute(get);
+                    httpGet.addHeader("X-DEVICE-UNIONID", basuuid);
+                    httpGet.addHeader("Accept", "application/json");
+                    httpGet.addHeader("Content-Type", "application/json; charset=utf-8");
+                    response = httpClient.execute(httpGet);
                     break;
                 case POST:
 

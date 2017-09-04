@@ -13,6 +13,8 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.yaxon.frameWork.R;
+import com.yaxon.frameWork.adapter.CommonAdapter;
+import com.yaxon.frameWork.adapter.CommonViewHold;
 
 
 import java.util.ArrayList;
@@ -61,7 +63,12 @@ public class ContactDetailActivity extends Activity implements AdapterView.OnIte
             contactBean.getPhones().add(phoneNumber);
         }
         phone.close();
-        ContactDetailAdapter adapter = new ContactDetailAdapter(contactBean.getPhones(), this);
+        CommonAdapter<String> adapter = new CommonAdapter<String>(contactBean.getPhones(), this, R.layout.contact_detail_item) {
+            @Override
+            public void convert(CommonViewHold commonViewHold, String item) {
+                commonViewHold.setText(R.id.number, item);
+            }
+        };
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(this);
     }

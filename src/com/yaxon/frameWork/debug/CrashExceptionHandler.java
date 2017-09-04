@@ -23,7 +23,7 @@ import java.util.Map;
  */
 
 public class CrashExceptionHandler implements UncaughtExceptionHandler {
-    private static final String TAG = "CrashExceptionHandler";
+    private static final String TAG = CrashExceptionHandler.class.getSimpleName();
     private UncaughtExceptionHandler mDefaultHandler; //系统默认的UncaughtException处理�?
     private static CrashExceptionHandler mInstance;//CrashHandler实例
     private Context mContext; //程序的Context对象
@@ -55,9 +55,9 @@ public class CrashExceptionHandler implements UncaughtExceptionHandler {
      *
      * @param context
      */
-    public void init(Context context) {
+    public void init(Context context, String path) {
         mContext = context;
-
+        this.path = path;
         // 获取系统默认的UncaughtException处理器
         mDefaultHandler = Thread.getDefaultUncaughtExceptionHandler();
 

@@ -2,17 +2,14 @@ package com.yaxon.frameWork.view.contact;
 
 import android.content.Context;
 import android.text.TextUtils;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AbsListView;
-import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 import com.yaxon.frameWork.R;
+import com.yaxon.frameWork.adapter.CommonAdapter;
+import com.yaxon.frameWork.adapter.CommonViewHold;
 import com.yaxon.frameWork.view.sideview.PinnedHeaderListView;
-
 
 import java.util.List;
 
@@ -20,58 +17,25 @@ import java.util.List;
  * @author guojiaping
  * @version 15/11/26 创建<br>
  */
-public class ContactAdapter extends BaseAdapter implements AbsListView.OnScrollListener, PinnedHeaderListView.PinnedHeaderAdapter, SectionIndexer {
-    public int width = 0;
-    ViewHolder viewHolder = null;
-    private List<ContactBean> mData;
-    private LayoutInflater mLayoutInflater;
+public class ContactAdapter extends CommonAdapter<ContactBean> implements AbsListView.OnScrollListener, PinnedHeaderListView.PinnedHeaderAdapter, SectionIndexer {
+
 
     public ContactAdapter(Context pContext, List<ContactBean> pData) {
-        mData = pData;
-        mLayoutInflater = LayoutInflater.from(pContext);
+        super(pData, pContext, R.layout.concact_sign_item);
     }
 
     @Override
-    public int getCount() {
-        return mData.size();
-    }
-
-    @Override
-    public Object getItem(int position) {
-        return mData.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        if (null == convertView) {
-            convertView = mLayoutInflater.inflate(R.layout.concact_sign_item, null);
-            viewHolder = new ViewHolder();
-            viewHolder.title = (TextView) convertView.findViewById(R.id.list_tab2_title);
-            viewHolder.name = (TextView) convertView.findViewById(R.id.list_tab2_sign);
-            width = viewHolder.name.getWidth();
-            convertView.setTag(viewHolder);
-        } else {
-            viewHolder = (ViewHolder) convertView.getTag();
-        }
-        // 获取数据
-        ContactBean itemEntity = (ContactBean) getItem(position);
-        viewHolder.name.setText(itemEntity.getName());
-        width = viewHolder.name.getWidth();
-        if (needTitle(position)) {
+    public void convert(CommonViewHold commonViewHold, ContactBean itemEntity) {
+        commonViewHold.setText(R.id.list_tab2_sign, itemEntity.getName());
+        TextView textView = commonViewHold.getView(R.id.list_tab2_title);
+        if (needTitle(getListData().indexOf(itemEntity))) {
             // 显示标题并设置内容
-            viewHolder.title.setText(itemEntity.getTitle());
-            viewHolder.title.setVisibility(View.VISIBLE);
+            textView.setText(itemEntity.getTitle());
+            textView.setVisibility(View.VISIBLE);
         } else {
             // 内容项隐藏标题
-            viewHolder.title.setVisibility(View.GONE);
+            textView.setVisibility(View.GONE);
         }
-        viewHolder.name.getWidth();
-        return convertView;
     }
 
     @Override
@@ -121,7 +85,7 @@ public class ContactAdapter extends BaseAdapter implements AbsListView.OnScrollL
     @Override
     public int getPositionForSection(int sectionIndex) {
         for (int i = 0; i < getCount(); i++) {
-            String sortStr = mData.get(i).getTitle();
+            String sortStr = getListData().get(i).getTitle();
             char firstChar = sortStr.toUpperCase().charAt(0);
             if (firstChar == sectionIndex) {
                 return i;
@@ -132,13 +96,7 @@ public class ContactAdapter extends BaseAdapter implements AbsListView.OnScrollL
 
     @Override
     public int getSectionForPosition(int position) {
-        return mData.get(position).getTitle().charAt(0);
-    }
-
-    private class ViewHolder {
-        TextView title;
-        TextView name;
-        ImageView carIcon;
+        return getListData().get(position).getTitle().charAt(0);
     }
 
     /**

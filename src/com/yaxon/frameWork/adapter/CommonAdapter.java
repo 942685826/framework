@@ -36,6 +36,9 @@ public abstract class CommonAdapter<T> extends BaseAdapter {
         notifyDataSetChanged();
     }
 
+    protected List<T> getListData() {
+        return list;
+    }
     public void setDataArray(T[] dataArray) {
         this.dataArray = dataArray;
         notifyDataSetChanged();

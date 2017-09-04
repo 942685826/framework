@@ -33,6 +33,8 @@ import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
 import com.yaxon.frameWork.R;
+import com.yaxon.frameWork.adapter.CommonAdapter;
+import com.yaxon.frameWork.adapter.CommonViewHold;
 import com.yaxon.frameWork.debug.ToastUtils;
 
 public class WifiListActivity extends Activity implements OnClickListener {
@@ -43,6 +45,7 @@ public class WifiListActivity extends Activity implements OnClickListener {
     private List<ScanResult> mWifiList;
     public int level;
     protected String ssid;
+    private CommonAdapter commonAdapter;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,7 +130,27 @@ public class WifiListActivity extends Activity implements OnClickListener {
                 mWifiAdmin.startScan(WifiListActivity.this);
                 mWifiList = mWifiAdmin.getWifiList();
                 if (mWifiList != null) {
-                    mlistView.setAdapter(new MyAdapter(this, mWifiList));
+                    if (commonAdapter == null) {
+                        commonAdapter = new CommonAdapter<ScanResult>(mWifiList, this, R.layout.wifi_listitem) {
+
+                            @Override
+                            public void convert(CommonViewHold commonViewHold, ScanResult scanResult) {
+                                ImageView wifi_level = commonViewHold.getView(R.id.wifi_level);
+                                commonViewHold.setText(R.id.ssid, scanResult.SSID);
+                                level = WifiManager.calculateSignalLevel(scanResult.level, 5);
+                                if (scanResult.capabilities.contains("WEP") || scanResult.capabilities.contains("PSK") ||
+                                        scanResult.capabilities.contains("EAP")) {
+                                    wifi_level.setImageResource(R.drawable.wifi_signal_lock);
+                                } else {
+                                    wifi_level.setImageResource(R.drawable.wifi_signal_open);
+                                }
+                                wifi_level.setImageLevel(level);
+                            }
+                        };
+                        mlistView.setAdapter(commonAdapter);
+                    } else {
+                        commonAdapter.setListData(mWifiList);
+                    }
                     new Utility().setListViewHeightBasedOnChildren(mlistView);
                 }
                 break;
@@ -137,53 +160,6 @@ public class WifiListActivity extends Activity implements OnClickListener {
                 break;
             default:
                 break;
-        }
-    }
-
-    public class MyAdapter extends BaseAdapter {
-        LayoutInflater inflater;
-        List<ScanResult> list;
-
-        public MyAdapter(Context context, List<ScanResult> list) {
-            this.inflater = LayoutInflater.from(context);
-            this.list = list;
-        }
-
-        @Override
-        public int getCount() {
-            return list.size();
-        }
-
-        @Override
-        public Object getItem(int position) {
-            return position;
-        }
-
-        @Override
-        public long getItemId(int position) {
-            return position;
-        }
-
-        @SuppressLint({"ViewHolder", "InflateParams"})
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            View view = null;
-            view = inflater.inflate(R.layout.wifi_listitem, null);
-            ScanResult scanResult = list.get(position);
-            TextView wifi_ssid = (TextView) view.findViewById(R.id.ssid);
-            ImageView wifi_level = (ImageView) view.findViewById(R.id.wifi_level);
-            wifi_ssid.setText(scanResult.SSID);
-            Log.i(TAG, "scanResult.SSID=" + scanResult);
-            level = WifiManager.calculateSignalLevel(scanResult.level, 5);
-            if (scanResult.capabilities.contains("WEP") || scanResult.capabilities.contains("PSK") ||
-                    scanResult.capabilities.contains("EAP")) {
-                wifi_level.setImageResource(R.drawable.wifi_signal_lock);
-            } else {
-                wifi_level.setImageResource(R.drawable.wifi_signal_open);
-            }
-            wifi_level.setImageLevel(level);
-            //判断信号强度，显示对应的指示图标  
-            return view;
         }
     }
 

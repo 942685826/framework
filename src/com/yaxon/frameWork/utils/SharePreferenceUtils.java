@@ -13,25 +13,25 @@ import java.util.Map;
  * @author guojiaping
  * @version 2016/7/5 创建<br>
  */
-public class SPUtils {
-    private SPUtils() {
+public class SharePreferenceUtils {
+    private SharePreferenceUtils() {
         throw new UnsupportedOperationException("cannot be instantiated");
     }
 
-    public static final String FILE_NAME = "config";
+    private static SharedPreferences sharedPreferences;
 
+    public static void init(Context context, String filename) {
+        sharedPreferences = context.getSharedPreferences(filename, Context.MODE_PRIVATE);
+    }
 
     /**
      * 保存数据的方法，根据类型调用不同的保存方法
      *
-     * @param context
      * @param key
      * @param object
      */
-    public static void put(Context context, String key, Object object) {
-        SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
-                Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sp.edit();
+    public static void put(String key, Object object) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         if (object instanceof String) {
             editor.putString(key, (String) object);
         } else if (object instanceof Integer) {
@@ -51,24 +51,21 @@ public class SPUtils {
     /**
      * 获取数据的方法，根据默认值得到数据的类型，然后调用对应方法获取值
      *
-     * @param context
      * @param key
      * @param defaultObject
      * @return
      */
-    public static Object get(Context context, String key, Object defaultObject) {
-        SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
-                Context.MODE_PRIVATE);
+    public static Object get(String key, Object defaultObject) {
         if (defaultObject instanceof String) {
-            return sp.getString(key, (String) defaultObject);
+            return sharedPreferences.getString(key, (String) defaultObject);
         } else if (defaultObject instanceof Integer) {
-            return sp.getInt(key, (Integer) defaultObject);
+            return sharedPreferences.getInt(key, (Integer) defaultObject);
         } else if (defaultObject instanceof Boolean) {
-            return sp.getBoolean(key, (Boolean) defaultObject);
+            return sharedPreferences.getBoolean(key, (Boolean) defaultObject);
         } else if (defaultObject instanceof Float) {
-            return sp.getFloat(key, (Float) defaultObject);
+            return sharedPreferences.getFloat(key, (Float) defaultObject);
         } else if (defaultObject instanceof Long) {
-            return sp.getLong(key, (Long) defaultObject);
+            return sharedPreferences.getLong(key, (Long) defaultObject);
         }
         return null;
     }
@@ -76,26 +73,19 @@ public class SPUtils {
     /**
      * 移除某个key对应的值
      *
-     * @param context
      * @param key
      */
-    public static void remove(Context context, String key) {
-        SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
-                Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sp.edit();
+    public static void remove(String key) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.remove(key);
         SharedPreferencesCompat.apply(editor);
     }
 
     /**
      * 清除所有数据
-     *
-     * @param context
      */
-    public static void clear(Context context) {
-        SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
-                Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sp.edit();
+    public static void clear() {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         SharedPreferencesCompat.apply(editor);
     }
@@ -103,26 +93,20 @@ public class SPUtils {
     /**
      * 查询某个key是否已经存在
      *
-     * @param context
      * @param key
      * @return
      */
-    public static boolean contains(Context context, String key) {
-        SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
-                Context.MODE_PRIVATE);
-        return sp.contains(key);
+    public static boolean contains(String key) {
+        return sharedPreferences.contains(key);
     }
 
     /**
      * 返回所有的键值对
      *
-     * @param context
      * @return
      */
-    public static Map<String, ?> getAll(Context context) {
-        SharedPreferences sp = context.getSharedPreferences(FILE_NAME,
-                Context.MODE_PRIVATE);
-        return sp.getAll();
+    public static Map<String, ?> getAll() {
+        return sharedPreferences.getAll();
     }
 
     /**
